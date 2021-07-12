@@ -1,0 +1,88 @@
+
+<%- include("partials/header"); -%>
+
+<h1>Upcoming metch</h1>
+<ul>
+  <li><h3>Mi vs CSK</h3></li>
+  <li><h3>SRH vs DC</h3></li>
+</ul>
+
+<div class="container my-2">
+  <h1>Team</h1>
+<ol class="list-group list-group-numbered">
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">DC</div>
+      Delhi Capitals
+    </div>
+    <span class="badge bg-primary rounded-pill">1</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">CSK</div>
+      Chennai Super King
+    </div>
+    <span class="badge bg-primary rounded-pill">2</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">RCB</div>
+      Royal Challengers Bangalore
+    </div>
+    <span class="badge bg-primary rounded-pill">3</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">MI</div>
+      Mumbai Indians
+    </div>
+    <span class="badge bg-primary rounded-pill">4</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">RR</div>
+      Rajstan Royal
+    </div>
+    <span class="badge bg-primary rounded-pill">5</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">PBKS</div>
+      Punjab Kings
+    </div>
+    <span class="badge bg-primary rounded-pill">6</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">KKR</div>
+      Kolkata Knight Riders
+    </div>
+    <span class="badge bg-primary rounded-pill">7</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">SRH</div>
+      Sunrisers Hyderabad
+    </div>
+    <span class="badge bg-primary rounded-pill">8</span>
+  </li>
+</ol>
+</div>
+
+    <h1>Comments</h1>
+    <p> <%= startingContent %> </p>
+
+
+  <%  posts.forEach(function(post){ %>
+
+    <h1><%=post.title%></h1>
+    <p>
+    <%=post.content.substring(0, 100) + " ..."%>
+    <a href="/posts/<%=post.title%>">Read More</a>
+    </p>
+
+
+    <% }) %>
+
+
+<%- include("partials/footer"); -%>
